@@ -52,3 +52,11 @@ h2{font:700 16px Manrope,sans-serif;margin:0}
 .button-note{text-align:center;margin:10px 0 28px}
 footer{border-top:1px solid #ffffff12;padding-top:16px;display:flex;justify-content:space-between;gap:12px;color:#777d89;font-size:9px}
 @media(min-width:600px){.shell{padding-top:30px}.panel{padding:22px}.face-upload{min-height:210px}}
+
+.external-engine{border:1px solid #647b45;background:linear-gradient(145deg,#20291b,#191e18);border-radius:18px;padding:18px;margin:0 0 14px}
+.engine-label{font-size:9px;letter-spacing:1.5px;color:var(--accent);font-weight:700}
+.external-engine h2{margin:8px 0;font:700 16px Manrope,sans-serif}
+.external-engine p{color:#b6bdad;font-size:12px;line-height:1.55}
+.engine-button{display:flex;justify-content:center;align-items:center;gap:9px;background:var(--accent);color:#18200f;text-decoration:none;border-radius:12px;padding:14px;font:700 13px Manrope,sans-serif;margin:14px 0}
+.engine-button span{font-size:17px}
+.external-engine small{display:block;color:#9da58f;font-size:10px;line-height:1.5}
