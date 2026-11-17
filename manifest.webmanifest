@@ -1,0 +1,10 @@
+{
+  "name": "FaceSwap Studio",
+  "short_name": "FaceSwap",
+  "description": "Подготовка видео и фотографий для замены лиц",
+  "lang": "ru",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#101114",
+  "theme_color": "#101114"
+}
