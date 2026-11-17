@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="FaceSwap Studio — подготовка видео с двумя лицами">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./styles.css">
+  <title>FaceSwap Studio</title>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="FaceSwap Studio">
+        <span class="brand-mark">FS</span>
+        <span>FaceSwap <b>Studio</b></span>
+      </a>
+      <span class="status-pill"><i></i> Прототип</span>
+    </header>
+
+    <section class="intro">
+      <p class="eyebrow">VIDEO WORKSPACE</p>
+      <h1>Два лица.<br><span>Одно видео.</span></h1>
+      <p class="subhead">Подготовьте исходное видео и две фотографии. Сейчас доступен предварительный просмотр файлов — обработка появится после подключения движка.</p>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div><span class="step">01</span><h2>Исходное видео</h2></div>
+        <span class="hint">MP4, MOV, WebM</span>
+      </div>
+      <label class="upload-zone video-zone" for="videoInput">
+        <span class="upload-icon">▶</span>
+        <strong>Выбрать видео</strong>
+        <span>Нажмите, чтобы загрузить файл с устройства</span>
+        <input id="videoInput" type="file" accept="video/mp4,video/quicktime,video/webm,video/*">
+      </label>
+      <div id="videoMeta" class="file-meta" hidden></div>
+      <video id="videoPreview" class="video-preview" controls playsinline hidden></video>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div><span class="step">02</span><h2>Фотографии лиц</h2></div>
+        <span class="hint">Два человека</span>
+      </div>
+      <div class="face-grid">
+        <label class="face-upload" for="faceOneInput">
+          <span class="face-number">ЛИЦО 01</span>
+          <span class="face-placeholder" id="faceOnePlaceholder">＋</span>
+          <img id="faceOnePreview" alt="Предпросмотр первого лица" hidden>
+          <strong>Загрузить фото 1</strong>
+          <small>Чёткое фото анфас</small>
+          <input id="faceOneInput" type="file" accept="image/*">
+        </label>
+        <label class="face-upload" for="faceTwoInput">
+          <span class="face-number">ЛИЦО 02</span>
+          <span class="face-placeholder" id="faceTwoPlaceholder">＋</span>
+          <img id="faceTwoPreview" alt="Предпросмотр второго лица" hidden>
+          <strong>Загрузить фото 2</strong>
+          <small>Чёткое фото анфас</small>
+          <input id="faceTwoInput" type="file" accept="image/*">
+        </label>
+      </div>
+    </section>
+
+    <section class="panel mapping-panel">
+      <div class="section-heading">
+        <div><span class="step">03</span><h2>Назначение лиц</h2></div>
+        <span class="hint">Настройка</span>
+      </div>
+      <div class="mapping-row"><span class="mapping-avatar">01</span><div><strong>Фото 1</strong><small>Будет назначено первому выбранному человеку</small></div><span class="mapping-arrow">→</span><span class="target">Человек 1</span></div>
+      <div class="mapping-row"><span class="mapping-avatar">02</span><div><strong>Фото 2</strong><small>Будет назначено второму выбранному человеку</small></div><span class="mapping-arrow">→</span><span class="target">Человек 2</span></div>
+      <p class="note">Автоматическое обнаружение людей и ручной выбор лиц в кадре ещё не подключены.</p>
+    </section>
+
+    <section class="consent">
+      <label><input id="consentCheck" type="checkbox"> <span>У меня есть согласие людей на использование их фотографий и обработку видео.</span></label>
+    </section>
+
+    <button id="processButton" class="primary-button" disabled>Обработка скоро появится <span>↗</span></button>
+    <p class="button-note" id="buttonNote">Сейчас можно проверить загрузку и предпросмотр файлов.</p>
+
+    <footer><span>FaceSwap Studio</span><span>Локальный предпросмотр · Без отправки файлов</span></footer>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
